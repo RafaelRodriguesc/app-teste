@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
-import { Users } from 'src/app/models/users';
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
