@@ -1,0 +1,17 @@
+.table {
+  width: 80%;
+  margin: 70px auto;
+}
+
+
+.principal {
+  background-color: red;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  color: red;
+  font-variant: small-caps;
+  font-size: 32px;
+}

@@ -1,0 +1,57 @@
+{
+  "usuarios": [
+    {
+      "nome": "Rafael Rodrigues",
+      "telefone": "12 99792-6349",
+      "email": "rafaelrodrigues.carvalho@yahoo.com.br",
+      "senha": "123",
+      "acesso": "Total",
+      "cep": "12092700",
+      "id": 111
+    },
+    {
+      "nome": "Juliaaaa",
+      "telefone": "12 99755-5412",
+      "email": "jurdgs@icloud.com",
+      "senha": "123",
+      "acesso": "Restrito",
+      "cep": "12140-970",
+      "id": 112
+    },
+    {
+      "nome": "Rogers Anselmo",
+      "telefone": "12 99884-6618",
+      "email": "rogers_rodrigues@outlookcom",
+      "senha": "123",
+      "acesso": "Restrito",
+      "cep": "11618-970",
+      "logradouro": "Rua Gilmar Furtado de Oliveira",
+      "bairro": "Boiçucanga",
+      "cidade": "São Sebastião",
+      "estado": "SP",
+      "id": 113
+    },
+    {
+      "nome": "Maria Auxiliadora",
+      "telefone": "12 99771-1999",
+      "email": "dora.m.cunha@hotmail.com",
+      "senha": "123",
+      "acesso": "Restrito",
+      "cep": "12460-970",
+      "logradouro": "Avenida Doutor Januário Miraglia",
+      "bairro": "Vila Abernéssia",
+      "cidade": "Campos do Jordão",
+      "estado": "SP",
+      "id": 114
+    },
+    {
+      "nome": "Lucas Rodrigues",
+      "telefone": "12 98192-7735",
+      "email": "lucas_rod27@hotmail.com",
+      "senha": "123",
+      "acesso": "Restrito",
+      "cep": "80320-350",
+      "id": 115
+    }
+  ]
+}

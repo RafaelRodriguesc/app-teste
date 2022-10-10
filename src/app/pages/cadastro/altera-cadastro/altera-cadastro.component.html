@@ -1,0 +1,83 @@
+<app-header></app-header>
+
+
+<h1 style="margin: 50px; color: red;">Altera | Usuários</h1>
+
+<form class="form-user bg-light" [formGroup]="usuarios" (ngSubmit)="alterar()">
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Nome:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu nome" required="campo obrigatorio" style="width: 450px;" formControlName="nome">
+  <div *ngIf="usuarios.get('nome')?.errors?.['required'] && usuarios.get('nome')?.touched">
+    <small style="font-style:italic; color:red;">Campo obrigatório*</small>
+  </div>
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Telefone:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0000-0000" style="width: 200px;" formControlName="telefone">
+  <div *ngIf="usuarios.get('telefone')?.errors?.['required'] && usuarios.get('telefone')?.touched">
+    <small style="font-style:italic; color:red;">Campo obrigatório*</small>
+  </div>
+</div>
+
+<div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Cep:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="00.000-000" style="width: 200px;" formControlName="cep" (blur)="buscaCep($event)">
+  <small class="classToApply" *ngIf="cepNaoEcontrado" style="color: red; font-style:italic">Cep inválido</small>
+  <div *ngIf="usuarios.get('cep')?.errors?.['required'] && usuarios.get('cep')?.touched">
+    <small style="font-style:italic; color:red;">Campo obrigatório*</small>
+  </div>
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Rua:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Logradouro" style="width: 450px;" formControlName="logradouro" [disabled]="disabled">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Bairro:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite seu bairro" style="width: 200px;" formControlName="bairro">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Cidade:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite sua cidade" style="width: 200px;" formControlName="cidade">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Estado:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="UF" style="width: 50px;" formControlName="estado">
+</div>
+</div>
+
+<hr>
+
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Email:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="example@gmail.com" style="width: 450px;" formControlName="email">
+  <div *ngIf="usuarios.get('email')?.errors?.['required'] && usuarios.get('email')?.touched">
+    <small style="font-style:italic; color:red;">Campo obrigatório*</small>
+  </div>
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Senha:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite sua senha" style="width: 200px;" formControlName="senha">
+  <div *ngIf="usuarios.get('senha')?.errors?.['required'] && usuarios.get('senha')?.touched">
+    <small style="font-style:italic; color:red;">Campo obrigatório*</small>
+  </div>
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Acesso:</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="acesso" style="width: 200px;" formControlName="acesso">
+  <div *ngIf="usuarios.get('acesso')?.errors?.['required'] && usuarios.get('acesso')?.touched">
+    <small style="font-style:italic; color:red;">Campo obrigatório*</small>
+  </div>
+</div>
+
+<div class="row" style="margin-left: 30px; margin-top: 20px;">
+  <div class="col md-3" style="display: flex; flex-direction: row;">
+    <div class="col mt-3">
+      <button class="btn btn-outline-success" [disabled]="!usuarios.valid">Salvar</button>
+      <button class="btn btn-outline-danger" style="margin-left: 10px;" (click)="goBack()">Cancelar</button>
+    </div>
+  </div>
+</div>
+</form>
+
+<app-footer></app-footer>

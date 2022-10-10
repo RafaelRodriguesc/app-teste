@@ -1,0 +1,9 @@
+a:hover {
+  background-color: red;
+  color: white;
+}
+
+.nav-link {
+  color: red;
+  font-size: 22px;
+}

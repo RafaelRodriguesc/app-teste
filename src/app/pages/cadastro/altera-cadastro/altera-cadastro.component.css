@@ -1,0 +1,6 @@
+.form-user {
+  width: 60%;
+  margin:100px auto;
+  padding: 10px;
+  box-shadow: 1px 2px 3px rgb(153, 152, 152), 2px 3px 4px #ccc, 3px 4px 5px rgb(221, 220, 220)
+}
