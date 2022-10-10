@@ -1,4 +1,3 @@
-import { Users } from './../models/users';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -26,7 +25,6 @@ export class UsersService {
 
   }
   deleteitem(params:any): Observable<any>{
-    const tabela = params.tabela
     const id = params.id
     return this._http.delete<any>(this.urlUser+'/'+id)
   }
